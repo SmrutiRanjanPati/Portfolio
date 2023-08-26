@@ -1,0 +1,20 @@
+:root{
+    --body_background: #0c0f1b;
+    --body_color: white;
+    --navbar_color:#0c0f1bef;
+    --button_color:linear-gradient(180deg, #ffcc89, #d8860b);
+    --active_link:rgb(255, 234, 0);
+    --active_color:rgb(255, 234, 0);
+}
+
+.light-theme{
+    --body_background: rgb(239, 236, 236);
+    --body_color: black;
+    --button_color:#0c0f1b;
+    --navbar_color: rgb(223 229 233);
+    --active_link:blue;
+    --active_color: rgb(147 35 0);
+}
+*{
+    transition: all 0.3s ease-in-out;
+}

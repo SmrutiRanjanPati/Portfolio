@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--active_color);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    background-color: rgb(29 26 26);
+}
+.footer span{
+    padding: 15px;
+}
