@@ -6,7 +6,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUser, 
+  faUser,
   faPhone,
   faClock,
   faCalendarAlt,
@@ -15,6 +15,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import 'aos/dist/aos.css';
+import AOS from 'aos';
+import gifimage from "../Assests/WhiteModeLogo.gif";
+import aboutme from "../Assests/aboutme.gif";
+import contactus from '../Assests/contact_us.jpg';
+import img1 from "../Assests/img1.jpg";
+import img2 from "../Assests/img2.jpg";
+import img3 from "../Assests/img3.jpg";
+import img4 from "../Assests/img4.jpg";
+import img5 from "../Assests/img5.jpg";
+import img6 from "../Assests/img6.jpg";
+import img7 from "../Assests/img7.jpg";
+import img8 from "../Assests/img8.jpg";
+
 
 
 function HomePage() {
@@ -59,28 +72,33 @@ function HomePage() {
       [name]: value
     });
   };
-  
- 
+
+  AOS.init();
 
   return (
     <>
+
       <Navbar />
       <div className="homepage_main">
         <Element name="home">
           <div className="homepage_landing_page">
-            <div className="homepage_image"  >
-              <img className="homepage_img" src="./Assests/WhiteModeLogo.gif" alt="profile_image" />
-            </div>
-            <div className="homepage_details">
-              <h3 className="homepage_text">hi there </h3>
-              <h1 className="homepage_about_text">I am a <span className="homepage_typed" ref={el} /></h1>
-              <a className='homepage_read_more' onClick={handleReadMoreClick} >read more</a>
+            <div className='homepage_first'>
+              <div className="homepage_image"  >
+                <img className="homepage_img" src={gifimage} alt="profile_image" />
+              </div>
+              <div className='homepage_base'>
+                <h3 className="homepage_text">hi there </h3>
+                <div className="homepage_details">
+                  <h1 className="homepage_about_text">I am a <span className="homepage_typed" ref={el} /></h1>
+                </div>
+                <a className='homepage_read_more' onClick={handleReadMoreClick} >read more</a>
+              </div>
             </div>
           </div>
         </Element>
         <Element name="portfolio">
           <div className='homepage_portfolio'>
-            <div className='homepage_portfolio_tagline'>
+            <div className='homepage_portfolio_tagline' >
               <h2 className='homepage_tagline'
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -88,14 +106,15 @@ function HomePage() {
                 data-aos-mirror="true"
               >I have worked on </h2>
             </div>
-            <div className='homepage_Portfolio_base'>
+            <div className='homepage_Portfolio_base' >
               <img
+
                 data-aos="fade-down-right"
                 data-aos-duration="1000"
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="homepage_portfolio_images" src="./Assests/img1.jpg" alt="portfolio_project" />
+                className="homepage_portfolio_images" src={img1} alt="portfolio_project" />
               <div className='homepage_portfolio_details'>
                 <h1 data-aos="fade-right"
                   data-aos-duration="600"
@@ -127,7 +146,7 @@ function HomePage() {
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="right_homepage_portfolio_images " src="./Assests/img2.jpg" alt="portfolio_project" />
+                className="right_homepage_portfolio_images " src={img2} alt="portfolio_project" />
             </div>
             <div className='homepage_Portfolio_base'>
               <img
@@ -136,7 +155,7 @@ function HomePage() {
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="homepage_portfolio_images" src="./Assests/img3.jpg" alt="portfolio_project" />
+                className="homepage_portfolio_images" src={img3} alt="portfolio_project" />
               <div className='homepage_portfolio_details'>
                 <h1 data-aos="fade-right"
                   data-aos-duration="600"
@@ -167,7 +186,7 @@ function HomePage() {
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="right_homepage_portfolio_images" src="./Assests/img7.jpg" alt="portfolio_project" />
+                className="right_homepage_portfolio_images" src={img7} alt="portfolio_project" />
             </div>
             <div className='homepage_Portfolio_base'>
               <img
@@ -176,7 +195,7 @@ function HomePage() {
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="homepage_portfolio_images" src="./Assests/img5.jpg" alt="portfolio_project" />
+                className="homepage_portfolio_images" src={img5} alt="portfolio_project" />
               <div className='homepage_portfolio_details'>
                 <h1 data-aos="fade-right"
                   data-aos-duration="600"
@@ -207,7 +226,7 @@ function HomePage() {
                 data-aos-offset="200"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                className="right_homepage_portfolio_images" src="./Assests/img8.jpg" alt="portfolio_project" />
+                className="right_homepage_portfolio_images" src={img8} alt="portfolio_project" />
             </div>
           </div>
         </Element>
@@ -215,7 +234,7 @@ function HomePage() {
           <div className='homepage_about'>
             <div className='homepage_about_main'>
               <div className='homepage_about_profile'>
-                <img src="./Assests/aboutme.gif" alt="aboutus_animation" />
+                <img src={aboutme} alt="aboutus_animation" />
               </div>
               <div className='homepage_about_content'>
                 <h3 className='homepage_about_discover'>Discover</h3>
@@ -267,7 +286,7 @@ function HomePage() {
           <div className='homepage_contact'>
             <div className='homepage_contact_base'>
               <div className='homepage_contact_image'>
-                <img className='homepage_contact_img' src="./Assests/contact_us.jpg" alt="contact_us_image" />
+                <img className='homepage_contact_img' src={contactus} alt="contact_us_image" />
               </div>
               <div className='homepage_contact_content'>
                 <form onSubmit={handleSubmit} className='homepage_contact_form'>
@@ -277,7 +296,7 @@ function HomePage() {
                   <div className='homepage_contact_submitform'>
                     <div className='homepage_contact_field'>
                       <input
-                      placeholder='enter your name'
+                        placeholder='enter your name'
                         type="text"
                         id="name"
                         name="name"
@@ -288,7 +307,7 @@ function HomePage() {
                     </div>
                     <div className='homepage_contact_field'>
                       <input
-                      placeholder='enter your email id'
+                        placeholder='enter your email id'
                         type="email"
                         id="email"
                         name="email"
@@ -299,7 +318,7 @@ function HomePage() {
                     </div>
                     <div className='homepage_contact_field'>
                       <input
-                      placeholder='Enter your mobile no'
+                        placeholder='Enter your mobile no'
                         type="number"
                         id="mobile"
                         name="mobile"
@@ -316,7 +335,7 @@ function HomePage() {
           </div>
         </Element>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
