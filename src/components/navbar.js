@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, scroller } from "react-scroll";
 import "./../css/navbar.css";
 import DarkMode from "./DarkMode";
-
+import logoImage from "../Assests/logo.png";
 function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
   const [prevActiveLink, setPrevActiveLink] = useState(null);
@@ -25,7 +25,7 @@ function Navbar() {
       <div className="navbar_design">
         <div className="navbar_style">
           <div className="navbar_logo">
-            <img onClick={handleLogoClick} src="./Assests/logo.png" alt="logo" />
+            <img onClick={handleLogoClick} src={logoImage} alt="logo" />
           </div>
           <div className="navbar_main">
             <Link
